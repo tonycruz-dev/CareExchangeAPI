@@ -12,6 +12,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<UserProfile> UserProfiles { get; set; } = null!;
     public DbSet<CareHomeClient> CareHomeClients { get; set; } = null!;
     public DbSet<CareHomeClientLocation> CareHomeClientLocations { get; set; } = null!;
+    public DbSet<JobType> JobTypes { get; set; }
+    public DbSet<Skill> Skills { get; set; }
 
 
 
@@ -82,6 +84,18 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .WithMany()
                   .HasForeignKey(e => e.CareHomeClientUserID)
                   .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<JobType>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<Skill>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
         });
 
     }

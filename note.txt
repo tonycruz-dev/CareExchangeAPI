@@ -1,2 +1,3 @@
 
 add-migration InitialMigration -OutputDir Data/Migrations
+add-migration JobTypesAdded -OutputDir Data/Migrations

@@ -16,6 +16,8 @@ public class CareExchangeDataModel
         builder.EntitySet<CareHomeClient>("CareHomeClients");
         builder.EntitySet<CareHomeClientLocation>("CareHomeClientLocations");
         builder.EntitySet<UserProfile>("UserProfiles");
+        builder.EntitySet<Skill>("Skills");
+        builder.EntitySet<JobType>("JobTypes");
 
 
         //var bookingServices = builder.EntitySet<BookingService>("BookingServices");
