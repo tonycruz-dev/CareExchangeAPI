@@ -1,0 +1,29 @@
+﻿using CareExchangeAPI.Models;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+
+namespace CareExchangeAPI.EntityDataModels;
+
+public class CareExchangeDataModel
+{
+    public  IEdmModel GetEntityDataModel()
+    {
+        var builder = new ODataConventionModelBuilder
+        {
+            Namespace = "CareExchange",
+            ContainerName = "CareExchangeContainer"
+        };
+        builder.EntitySet<CareHomeClient>("CareHomeClients");
+        builder.EntitySet<CareHomeClientLocation>("CareHomeClientLocations");
+        builder.EntitySet<UserProfile>("UserProfiles");
+
+
+        //var bookingServices = builder.EntitySet<BookingService>("BookingServices");
+        //bookingServices.EntityType.HasKey(bs => new { bs.BookingId, bs.ServiceId });
+
+
+
+        builder.EnableLowerCamelCase(NameResolverOptions.ProcessReflectedPropertyNames);
+        return builder.GetEdmModel();
+    }
+}

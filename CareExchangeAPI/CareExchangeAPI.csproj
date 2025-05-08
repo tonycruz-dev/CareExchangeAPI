@@ -26,7 +26,6 @@
 	<ItemGroup>
 	  <Folder Include="EntityDataModels\" />
 	  <Folder Include="SeedModel\" />
-	  <Folder Include="OdataControllers\" />
 	</ItemGroup>
 
 </Project>
