@@ -14,7 +14,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<CareHomeClientLocation> CareHomeClientLocations { get; set; } = null!;
     public DbSet<JobType> JobTypes { get; set; }
     public DbSet<Skill> Skills { get; set; }
-
+    public DbSet<Shift> Shifts { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -98,5 +98,34 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
             entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
         });
 
+        modelBuilder.Entity<Shift>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Status)
+                  .HasConversion<string>()
+                  .IsRequired();
+
+            entity.Property(e => e.HourlyRate)
+                  .HasColumnType("decimal(10,2)");
+
+            entity.Property(e => e.BreakMinutes)
+                  .HasDefaultValue(0);
+
+            entity.HasOne(e => e.Location)
+                  .WithMany()
+                  .HasForeignKey(e => e.LocationID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.JobType)
+                  .WithMany()
+                  .HasForeignKey(e => e.JobTypeID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.CreatedByClientUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.CreatedByClientUserID)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
     }
 }

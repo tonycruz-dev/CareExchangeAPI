@@ -22,6 +22,18 @@ public class UserProfilesOdataController(AppDbContext context) : ControllerBase
         return context.UserProfiles
                       .AsNoTracking(); 
     }
-
-   
+}
+[Route("odata/Shifts")]
+[Tags("Shifts")]
+[ApiController]
+[ODataAttributeRouting]
+public class ShiftsOdataController(AppDbContext context) : ControllerBase
+{
+    // GET: odata/UserProfiles
+    [HttpGet]
+    [EnableQuery(PageSize = 100)]
+    public IQueryable<Shift> Get()
+    {
+        return context.Shifts.AsNoTracking(); 
+    }
 }
