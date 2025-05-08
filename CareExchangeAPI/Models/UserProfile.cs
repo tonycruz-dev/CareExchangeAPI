@@ -52,4 +52,5 @@ public class UserProfile
     // Navigation property
     // Explicit foreign key navigation
     public virtual User User { get; set; } = null!;
+    public virtual ICollection<ShiftAssignment> ShiftAssignments { get; set; } = [];
 }

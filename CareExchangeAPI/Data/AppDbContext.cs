@@ -15,6 +15,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<JobType> JobTypes { get; set; }
     public DbSet<Skill> Skills { get; set; }
     public DbSet<Shift> Shifts { get; set; }
+    public DbSet<ShiftAssignment> ShiftAssignments { get; set; }
+    public DbSet<ShiftRate> ShiftRates { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -37,6 +39,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasForeignKey<UserProfile>(e => e.ProfileUserID)
                   .HasPrincipalKey<User>(u => u.Id) // Assuming User.Id is string
                   .OnDelete(DeleteBehavior.Cascade);
+
+            
 
             entity.Property(e => e.FirstName).IsRequired();
             entity.Property(e => e.LastName).IsRequired();
@@ -126,6 +130,63 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .WithMany()
                   .HasForeignKey(e => e.CreatedByClientUserID)
                   .OnDelete(DeleteBehavior.Restrict);
+
+
         });
+        modelBuilder.Entity<Shift>()
+            .HasMany(s => s.ShiftAssignments)
+            .WithOne(a => a.Shift)
+            .HasForeignKey(a => a.FromShiftId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Shift>()
+            .HasMany(s => s.ShiftRates)
+            .WithOne(r => r.Shift)
+            //.HasForeignKey(r => r.ShiftId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<ShiftAssignment>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Status)
+                  .HasConversion<string>()
+                  .IsRequired();
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  //.HasForeignKey(e => e.ShiftId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.UserProfile)
+                  .WithMany()
+                  .HasForeignKey(e => e.ProfileId)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<ShiftRate>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.RateType)
+                  .HasConversion<string>()
+                  .HasDefaultValue(RateType.Base)
+                  .IsRequired();
+
+            entity.Property(e => e.HourlyRate)
+                  .HasColumnType("decimal(6,2)")
+                  .IsRequired();
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.Id)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        //modelBuilder.Entity<UserProfile>()
+        //    .HasMany(u => u.ShiftAssignments)
+        //    .WithOne(a => a.Candidate.)
+        //    .HasForeignKey(a => a.CandidateID)
+        //    .OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -7,7 +7,7 @@ public class Shift
     public int Id { get; set; }
     public int LocationID { get; set; }
     public int JobTypeID { get; set; }
-    public string CreatedByClientUserID { get; set; }
+    
     public ShiftStatus Status { get; set; }
 
     public DateTime? StartTime { get; set; }
@@ -20,5 +20,12 @@ public class Shift
     // Navigation properties
     public virtual CareHomeClientLocation Location { get; set; } = null!;
     public virtual JobType JobType { get; set; } = null!;
-    public virtual User CreatedByClientUser { get; set; } = null!;
+
+    public int? CreatedByClientUserID { get; set; }
+    public virtual UserProfile? CreatedByClientUser { get; set; } = null!;
+
+    public virtual ICollection<ShiftAssignment> ShiftAssignments { get; set; } = [];
+
+    public virtual ICollection<ShiftRate> ShiftRates { get; set; } = [];
 }
+

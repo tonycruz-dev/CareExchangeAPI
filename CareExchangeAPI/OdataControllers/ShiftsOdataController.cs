@@ -8,19 +8,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareExchangeAPI.OdataControllers;
 
-[Route("odata/UserProfiles")]
-[Tags("UserProfiles")]
+[Route("odata/Shifts")]
+[Tags("Shifts")]
 [ApiController]
 [ODataAttributeRouting]
-public class UserProfilesOdataController(AppDbContext context) : ControllerBase
+public class ShiftsOdataController(AppDbContext context) : ControllerBase
 {
     // GET: odata/UserProfiles
     [HttpGet]
     [EnableQuery(PageSize = 100)]
-    public IQueryable<UserProfile> Get()
+    public IQueryable<Shift> Get()
     {
-        return context.UserProfiles
-                      .AsNoTracking(); 
+        return context.Shifts.AsNoTracking(); 
     }
 }
-

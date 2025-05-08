@@ -19,6 +19,9 @@ public class CareExchangeDataModel
         builder.EntitySet<Skill>("Skills");
         builder.EntitySet<JobType>("JobTypes");
         builder.EntitySet<Shift>("Shifts");
+        builder.EntitySet<ShiftAssignment>("ShiftAssignments");
+        builder.EntitySet<ShiftRate>("ShiftRates");
+
 
 
         //var bookingServices = builder.EntitySet<BookingService>("BookingServices");
