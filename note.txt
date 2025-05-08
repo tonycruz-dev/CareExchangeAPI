@@ -1,0 +1,2 @@
+
+add-migration InitialMigration -OutputDir Data/Migrations
