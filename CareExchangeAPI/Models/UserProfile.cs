@@ -53,4 +53,5 @@ public class UserProfile
     // Explicit foreign key navigation
     public virtual User User { get; set; } = null!;
     public virtual ICollection<ShiftAssignment> ShiftAssignments { get; set; } = [];
+    public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
 }

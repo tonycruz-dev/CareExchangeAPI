@@ -17,6 +17,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<Shift> Shifts { get; set; }
     public DbSet<ShiftAssignment> ShiftAssignments { get; set; }
     public DbSet<ShiftRate> ShiftRates { get; set; }
+    public DbSet<Timesheet> Timesheets { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -188,5 +189,33 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
         //    .WithOne(a => a.Candidate.)
         //    .HasForeignKey(a => a.CandidateID)
         //    .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Timesheet>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.SubmittedByCandidate).HasDefaultValue(false);
+            entity.Property(e => e.ApprovedByClient).HasDefaultValue(false);
+            entity.Property(e => e.Rejected).HasDefaultValue(false);
+            entity.Property(e => e.SignedOffBy).HasMaxLength(100);
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.TimesheetShiftId)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Candidate)
+                  .WithMany()
+                  .HasForeignKey(e => e.TimesheetUserPrifileId)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Client)
+                  .WithMany()
+                  .HasForeignKey(e => e.TimesheetClientID)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+
     }
 }

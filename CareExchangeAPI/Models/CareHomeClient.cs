@@ -28,4 +28,5 @@ public class CareHomeClient
 
     public virtual User User { get; set; } = null!;
     public virtual ICollection<CareHomeClientLocation> Locations { get; set; } = [];
+    public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
 }

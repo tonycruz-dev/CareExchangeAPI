@@ -27,5 +27,6 @@ public class Shift
     public virtual ICollection<ShiftAssignment> ShiftAssignments { get; set; } = [];
 
     public virtual ICollection<ShiftRate> ShiftRates { get; set; } = [];
+    public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
 }
 
