@@ -54,4 +54,7 @@ public class UserProfile
     public virtual User User { get; set; } = null!;
     public virtual ICollection<ShiftAssignment> ShiftAssignments { get; set; } = [];
     public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
+    public virtual ICollection<CandidateDocument> CandidateDocuments { get; set; } = [];
+    public virtual ICollection<Shift> Shifts { get; set; } = [];
+    public virtual ICollection<Notification> Notifications { get; set; } = [];
 }

@@ -24,7 +24,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="EntityDataModels\" />
 	  <Folder Include="SeedModel\" />
 	</ItemGroup>
 

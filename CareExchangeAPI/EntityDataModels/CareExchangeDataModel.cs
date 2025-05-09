@@ -21,6 +21,11 @@ public class CareExchangeDataModel
         builder.EntitySet<Shift>("Shifts");
         builder.EntitySet<ShiftAssignment>("ShiftAssignments");
         builder.EntitySet<ShiftRate>("ShiftRates");
+        builder.EntitySet<Timesheet>("Timesheets");
+        builder.EntitySet<Document>("Documents");
+        builder.EntitySet<CandidateDocument>("CandidateDocuments");
+        builder.EntitySet<Notification>("Notifications");
+
 
 
 

@@ -4,6 +4,7 @@ using CareExchangeAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CareExchangeAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250508164228_CandidateDocumentAdded")]
+    partial class CandidateDocumentAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,56 +242,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.ToTable("JobTypes");
                 });
 
-            modelBuilder.Entity("CareExchangeAPI.Models.Notification", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-                    b.Property<bool>("IsRead")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<string>("Message")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NotificationUserID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RecipientType")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("Candidate");
-
-                    b.Property<string>("Title")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("TypeOfNotification")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("UserProfileId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NotificationUserID");
-
-                    b.HasIndex("UserProfileId");
-
-                    b.ToTable("Notifications");
-                });
-
             modelBuilder.Entity("CareExchangeAPI.Models.Shift", b =>
                 {
                     b.Property<int>("Id")
@@ -327,9 +280,6 @@ namespace CareExchangeAPI.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserProfileId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedByClientUserID");
@@ -337,8 +287,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.HasIndex("JobTypeID");
 
                     b.HasIndex("LocationID");
-
-                    b.HasIndex("UserProfileId");
 
                     b.ToTable("Shifts");
                 });
@@ -854,21 +802,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.Navigation("CareHomeClient");
                 });
 
-            modelBuilder.Entity("CareExchangeAPI.Models.Notification", b =>
-                {
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", "User")
-                        .WithMany()
-                        .HasForeignKey("NotificationUserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", null)
-                        .WithMany("Notifications")
-                        .HasForeignKey("UserProfileId");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("CareExchangeAPI.Models.Shift", b =>
                 {
                     b.HasOne("CareExchangeAPI.Models.UserProfile", "CreatedByClientUser")
@@ -887,10 +820,6 @@ namespace CareExchangeAPI.Data.Migrations
                         .HasForeignKey("LocationID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
-
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", null)
-                        .WithMany("Shifts")
-                        .HasForeignKey("UserProfileId");
 
                     b.Navigation("CreatedByClientUser");
 
@@ -1073,11 +1002,7 @@ namespace CareExchangeAPI.Data.Migrations
                 {
                     b.Navigation("CandidateDocuments");
 
-                    b.Navigation("Notifications");
-
                     b.Navigation("ShiftAssignments");
-
-                    b.Navigation("Shifts");
 
                     b.Navigation("Timesheets");
                 });

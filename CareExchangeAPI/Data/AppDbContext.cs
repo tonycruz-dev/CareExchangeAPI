@@ -18,6 +18,9 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<ShiftAssignment> ShiftAssignments { get; set; }
     public DbSet<ShiftRate> ShiftRates { get; set; }
     public DbSet<Timesheet> Timesheets { get; set; }
+    public DbSet<Document> Documents { get; set; }
+    public DbSet<CandidateDocument> CandidateDocuments { get; set; }
+    public DbSet<Notification> Notifications { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -216,6 +219,62 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .OnDelete(DeleteBehavior.Restrict);
         });
 
+        modelBuilder.Entity<Document>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Name).HasMaxLength(255);
+            entity.Property(e => e.Required).HasDefaultValue(false);
+            entity.Property(e => e.ClientVisible).HasDefaultValue(false);
+            entity.Property(e => e.CandidateVisible).HasDefaultValue(false);
+        });
 
+        modelBuilder.Entity<CandidateDocument>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Status)
+                  .HasConversion<string>()
+                  .HasDefaultValue(CandidateDocumentStatus.Uploaded);
+
+            entity.Property(e => e.IsRequired).HasDefaultValue(true);
+            entity.Property(e => e.UploadedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Candidate)
+                  .WithMany()
+                  .HasForeignKey(e => e.CandidateDocID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Document)
+                  .WithMany()
+                  .HasForeignKey(e => e.CanDocID)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.Reviewer)
+                  .WithMany()
+                  .HasForeignKey(e => e.ReviewedBy)
+                  .OnDelete(DeleteBehavior.SetNull);
+        });
+
+        modelBuilder.Entity<Notification>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.RecipientType)
+                  .HasConversion<string>()
+                  .HasDefaultValue(RecipientType.Candidate);
+
+            entity.Property(e => e.TypeOfNotification)
+                  .HasConversion<string>()
+                  .IsRequired();
+
+            entity.Property(e => e.Title).HasMaxLength(255);
+            entity.Property(e => e.IsRead).HasDefaultValue(false);
+            entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.User)
+                  .WithMany()
+                  .HasForeignKey(e => e.NotificationUserID)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CareExchangeAPI.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CareExchangeAPI.Models;
 
@@ -29,4 +30,3 @@ public class Shift
     public virtual ICollection<ShiftRate> ShiftRates { get; set; } = [];
     public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
 }
-
