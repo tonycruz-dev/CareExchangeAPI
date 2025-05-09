@@ -21,6 +21,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<Document> Documents { get; set; }
     public DbSet<CandidateDocument> CandidateDocuments { get; set; }
     public DbSet<Notification> Notifications { get; set; }
+    public DbSet<Message> Messages { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -276,5 +277,35 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasForeignKey(e => e.NotificationUserID)
                   .OnDelete(DeleteBehavior.Cascade);
         });
+
+        modelBuilder.Entity<Message>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.IsBroadcast).HasDefaultValue(false);
+            entity.Property(e => e.SentAt).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Sender)
+                  .WithMany()
+                  .HasForeignKey(e => e.SenderID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Receiver)
+                  .WithMany()
+                  .HasForeignKey(e => e.ReceiverID)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<UserProfile>()
+        .HasMany(u => u.SentMessages)
+        .WithOne(m => m.Sender)
+        .HasForeignKey(m => m.SenderID)
+        .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(u => u.ReceivedMessages)
+            .WithOne(m => m.Receiver)
+            .HasForeignKey(m => m.ReceiverID)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

@@ -57,4 +57,7 @@ public class UserProfile
     public virtual ICollection<CandidateDocument> CandidateDocuments { get; set; } = [];
     public virtual ICollection<Shift> Shifts { get; set; } = [];
     public virtual ICollection<Notification> Notifications { get; set; } = [];
+
+    public virtual ICollection<Message> SentMessages { get; set; } = [];
+    public virtual ICollection<Message> ReceivedMessages { get; set; } = [];
 }
