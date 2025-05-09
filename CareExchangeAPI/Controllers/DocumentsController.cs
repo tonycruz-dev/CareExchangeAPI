@@ -10,14 +10,9 @@ namespace CareExchangeAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class DocumentsController : ControllerBase
+public class DocumentsController(AppDbContext context) : ControllerBase
 {
-    private readonly AppDbContext _context;
-
-    public DocumentsController(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     // POST: api/Documents
     [HttpPost]

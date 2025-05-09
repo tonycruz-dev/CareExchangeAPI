@@ -158,3 +158,14 @@ public enum NotificationType
     [Display(Name = "Document Requested")]
     DocumentRequested
 }
+public enum CalendarEventType
+{
+    [Display(Name = "Booked Shift")]
+    BookedShift,
+
+    [Display(Name = "Available")]
+    Available,
+
+    [Display(Name = "Unavailable")]
+    Unavailable
+}

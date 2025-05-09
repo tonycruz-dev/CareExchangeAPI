@@ -26,6 +26,7 @@ public class CareExchangeDataModel
         builder.EntitySet<CandidateDocument>("CandidateDocuments");
         builder.EntitySet<Notification>("Notifications");
         builder.EntitySet<Message>("Messages");
+        builder.EntitySet<CalendarEvent>("CalendarEvents");
 
 
 

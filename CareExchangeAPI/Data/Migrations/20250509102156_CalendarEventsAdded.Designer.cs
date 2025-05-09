@@ -4,6 +4,7 @@ using CareExchangeAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CareExchangeAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250509102156_CalendarEventsAdded")]
+    partial class CalendarEventsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -863,12 +866,12 @@ namespace CareExchangeAPI.Data.Migrations
             modelBuilder.Entity("CareExchangeAPI.Models.CalendarEvent", b =>
                 {
                     b.HasOne("CareExchangeAPI.Models.Shift", "Shift")
-                        .WithMany("CalendarEvents")
+                        .WithMany()
                         .HasForeignKey("CalendarShiftId")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("CareExchangeAPI.Models.UserProfile", "User")
-                        .WithMany("CalendarEvents")
+                        .WithMany()
                         .HasForeignKey("CalendarUserId")
                         .OnDelete(DeleteBehavior.Restrict);
 
@@ -1155,8 +1158,6 @@ namespace CareExchangeAPI.Data.Migrations
 
             modelBuilder.Entity("CareExchangeAPI.Models.Shift", b =>
                 {
-                    b.Navigation("CalendarEvents");
-
                     b.Navigation("ShiftAssignments");
 
                     b.Navigation("ShiftRates");
@@ -1173,8 +1174,6 @@ namespace CareExchangeAPI.Data.Migrations
 
             modelBuilder.Entity("CareExchangeAPI.Models.UserProfile", b =>
                 {
-                    b.Navigation("CalendarEvents");
-
                     b.Navigation("CandidateDocuments");
 
                     b.Navigation("Notifications");

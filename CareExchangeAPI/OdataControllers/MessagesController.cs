@@ -22,3 +22,17 @@ public class MessagesController(AppDbContext context) : ControllerBase
         return context.Messages.AsNoTracking(); 
     }
 }
+[Route("odata/CalendarEvents")]
+[Tags("CalendarEvents")]
+[ApiController]
+[ODataAttributeRouting]
+public class CalendarEventsController(AppDbContext context) : ControllerBase
+{
+    // GET: odata/UserProfiles
+    [HttpGet]
+    [EnableQuery(PageSize = 100)]
+    public IQueryable<CalendarEvent> Get()
+    {
+        return context.CalendarEvents.AsNoTracking(); 
+    }
+}

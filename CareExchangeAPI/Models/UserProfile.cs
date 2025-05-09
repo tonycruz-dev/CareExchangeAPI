@@ -60,4 +60,5 @@ public class UserProfile
 
     public virtual ICollection<Message> SentMessages { get; set; } = [];
     public virtual ICollection<Message> ReceivedMessages { get; set; } = [];
+    public virtual ICollection<CalendarEvent> CalendarEvents { get; set; } = [];
 }

@@ -22,6 +22,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<CandidateDocument> CandidateDocuments { get; set; }
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<CalendarEvent> CalendarEvents { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -306,6 +307,36 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
             .HasMany(u => u.ReceivedMessages)
             .WithOne(m => m.Receiver)
             .HasForeignKey(m => m.ReceiverID)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<CalendarEvent>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.EventType)
+                  .HasConversion<string>();
+
+            entity.HasOne(e => e.User)
+                  .WithMany()
+                  .HasForeignKey(e => e.CalendarUserId)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.CalendarShiftId)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(u => u.CalendarEvents)
+            .WithOne(e => e.User)
+            .HasForeignKey(e => e.CalendarUserId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Shift>()
+            .HasMany(s => s.CalendarEvents)
+            .WithOne(e => e.Shift)
+            .HasForeignKey(e => e.CalendarShiftId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }
