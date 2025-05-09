@@ -27,6 +27,7 @@ public class CareExchangeDataModel
         builder.EntitySet<Notification>("Notifications");
         builder.EntitySet<Message>("Messages");
         builder.EntitySet<CalendarEvent>("CalendarEvents");
+        builder.EntitySet<ShiftOffer>("ShiftOffers");
 
 
 

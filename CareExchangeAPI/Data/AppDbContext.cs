@@ -24,6 +24,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<Message> Messages { get; set; }
     public DbSet<CalendarEvent> CalendarEvents { get; set; }
 
+    public DbSet<ShiftOffer> ShiftOffers { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -338,5 +340,27 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
             .WithOne(e => e.Shift)
             .HasForeignKey(e => e.CalendarShiftId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<ShiftOffer>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.OfferStatus)
+                  .HasConversion<string>()
+                  .HasDefaultValue(ShiftOfferStatus.Pending);
+
+            entity.Property(e => e.OfferedAt)
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.ShiftOfferShiftID)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.Candidate)
+                  .WithMany()
+                  .HasForeignKey(e => e.ShiftOfferCandidateID)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
     }
 }

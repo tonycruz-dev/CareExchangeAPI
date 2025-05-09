@@ -169,3 +169,14 @@ public enum CalendarEventType
     [Display(Name = "Unavailable")]
     Unavailable
 }
+public enum ShiftOfferStatus
+{
+    [Display(Name = "Pending")]
+    Pending,
+
+    [Display(Name = "Accepted")]
+    Accepted,
+
+    [Display(Name = "Rejected")]
+    Rejected
+}

@@ -30,4 +30,5 @@ public class Shift
     public virtual ICollection<ShiftRate> ShiftRates { get; set; } = [];
     public virtual ICollection<Timesheet> Timesheets { get; set; } = [];
     public virtual ICollection<CalendarEvent> CalendarEvents { get; set; } = [];
+    public virtual ICollection<ShiftOffer> ShiftOffers { get; set; } = [];
 }
