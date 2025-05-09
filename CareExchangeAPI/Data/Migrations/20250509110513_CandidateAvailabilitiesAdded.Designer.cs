@@ -4,6 +4,7 @@ using CareExchangeAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CareExchangeAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250509110513_CandidateAvailabilitiesAdded")]
+    partial class CandidateAvailabilitiesAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -475,45 +478,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.HasIndex("UserProfileId");
 
                     b.ToTable("ShiftAssignments");
-                });
-
-            modelBuilder.Entity("CareExchangeAPI.Models.ShiftLog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ChangeReason")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NewStatus")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("OldStatus")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("ShiftLogId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ShiftLogUserID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Timestamp")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ShiftLogId");
-
-                    b.HasIndex("ShiftLogUserID");
-
-                    b.ToTable("ShiftLogs");
                 });
 
             modelBuilder.Entity("CareExchangeAPI.Models.ShiftOffer", b =>
@@ -1151,25 +1115,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.Navigation("UserProfile");
                 });
 
-            modelBuilder.Entity("CareExchangeAPI.Models.ShiftLog", b =>
-                {
-                    b.HasOne("CareExchangeAPI.Models.Shift", "Shift")
-                        .WithMany("ShiftLogs")
-                        .HasForeignKey("ShiftLogId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", "ChangedByUser")
-                        .WithMany("ShiftLogsChanged")
-                        .HasForeignKey("ShiftLogUserID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("ChangedByUser");
-
-                    b.Navigation("Shift");
-                });
-
             modelBuilder.Entity("CareExchangeAPI.Models.ShiftOffer", b =>
                 {
                     b.HasOne("CareExchangeAPI.Models.Shift", null)
@@ -1332,8 +1277,6 @@ namespace CareExchangeAPI.Data.Migrations
 
                     b.Navigation("ShiftAssignments");
 
-                    b.Navigation("ShiftLogs");
-
                     b.Navigation("ShiftOffers");
 
                     b.Navigation("ShiftRates");
@@ -1363,8 +1306,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.Navigation("SentMessages");
 
                     b.Navigation("ShiftAssignments");
-
-                    b.Navigation("ShiftLogsChanged");
 
                     b.Navigation("ShiftOffers");
 

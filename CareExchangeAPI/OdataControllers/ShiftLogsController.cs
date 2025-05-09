@@ -8,17 +8,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareExchangeAPI.OdataControllers;
 
-[Route("odata/Messages")]
-[Tags("Messages")]
+[Route("odata/ShiftLogs")]
+[Tags("ShiftLogs")]
 [ApiController]
 [ODataAttributeRouting]
-public class MessagesController(AppDbContext context) : ControllerBase
+public class ShiftLogsController(AppDbContext context) : ControllerBase
 {
     // GET: odata/UserProfiles
     [HttpGet]
     [EnableQuery(PageSize = 100)]
-    public IQueryable<Message> Get()
+    public IQueryable<ShiftLog> Get()
     {
-        return context.Messages.AsNoTracking(); 
+        return context.ShiftLogs.AsNoTracking(); 
     }
 }

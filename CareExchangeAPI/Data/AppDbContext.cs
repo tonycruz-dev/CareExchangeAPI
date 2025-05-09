@@ -25,6 +25,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<CalendarEvent> CalendarEvents { get; set; }
 
     public DbSet<ShiftOffer> ShiftOffers { get; set; }
+    public DbSet<CandidateAvailability> CandidateAvailabilities { get; set; }
+    public DbSet<ShiftLog> ShiftLogs { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -362,5 +364,53 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasForeignKey(e => e.ShiftOfferCandidateID)
                   .OnDelete(DeleteBehavior.Cascade);
         });
+
+        modelBuilder.Entity<CandidateAvailability>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Date).IsRequired();
+
+            entity.Property(e => e.DayAvailable)
+                  .HasDefaultValue(false);
+
+            entity.Property(e => e.NightAvailable)
+                  .HasDefaultValue(false);
+
+            entity.HasOne(e => e.Candidate)
+                  .WithMany(u => u.CandidateAvailabilities)
+                  .HasForeignKey(e => e.CndAviCandidateID)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<ShiftLog>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.OldStatus).HasMaxLength(50);
+            entity.Property(e => e.NewStatus).HasMaxLength(50);
+            entity.Property(e => e.Timestamp).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.ShiftLogUserID)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.ChangedByUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.ShiftLogUserID)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(u => u.ShiftLogsChanged)
+            .WithOne(log => log.ChangedByUser)
+            .HasForeignKey(log => log.ShiftLogUserID)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Shift>()
+            .HasMany(s => s.ShiftLogs)
+            .WithOne(log => log.Shift)
+            .HasForeignKey(log => log.ShiftLogId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

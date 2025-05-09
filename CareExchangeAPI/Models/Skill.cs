@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CareExchangeAPI.Models;
+﻿namespace CareExchangeAPI.Models;
 
 public class Skill
 {

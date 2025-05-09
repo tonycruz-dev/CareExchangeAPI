@@ -8,17 +8,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareExchangeAPI.OdataControllers;
 
-[Route("odata/Messages")]
-[Tags("Messages")]
+[Route("odata/CandidateAvailabilities")]
+[Tags("CandidateAvailabilities")]
 [ApiController]
 [ODataAttributeRouting]
-public class MessagesController(AppDbContext context) : ControllerBase
+public class CandidateAvailabilitiesOdataController(AppDbContext context) : ControllerBase
 {
     // GET: odata/UserProfiles
     [HttpGet]
     [EnableQuery(PageSize = 100)]
-    public IQueryable<Message> Get()
+    public IQueryable<CandidateAvailability> Get()
     {
-        return context.Messages.AsNoTracking(); 
+        return context.CandidateAvailabilities.AsNoTracking(); 
     }
 }

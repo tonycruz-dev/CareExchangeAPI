@@ -8,17 +8,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CareExchangeAPI.OdataControllers;
 
-[Route("odata/Messages")]
-[Tags("Messages")]
+[Route("odata/CalendarEvents")]
+[Tags("CalendarEvents")]
 [ApiController]
 [ODataAttributeRouting]
-public class MessagesController(AppDbContext context) : ControllerBase
+public class CalendarEventsController(AppDbContext context) : ControllerBase
 {
     // GET: odata/UserProfiles
     [HttpGet]
     [EnableQuery(PageSize = 100)]
-    public IQueryable<Message> Get()
+    public IQueryable<CalendarEvent> Get()
     {
-        return context.Messages.AsNoTracking(); 
+        return context.CalendarEvents.AsNoTracking(); 
     }
 }

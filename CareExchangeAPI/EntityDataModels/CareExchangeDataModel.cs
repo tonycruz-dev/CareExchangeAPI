@@ -28,6 +28,8 @@ public class CareExchangeDataModel
         builder.EntitySet<Message>("Messages");
         builder.EntitySet<CalendarEvent>("CalendarEvents");
         builder.EntitySet<ShiftOffer>("ShiftOffers");
+        builder.EntitySet<CandidateAvailability>("CandidateAvailabilities");
+        builder.EntitySet<ShiftLog>("ShiftLogs");
 
 
 
