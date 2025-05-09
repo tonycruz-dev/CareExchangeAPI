@@ -27,6 +27,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<ShiftOffer> ShiftOffers { get; set; }
     public DbSet<CandidateAvailability> CandidateAvailabilities { get; set; }
     public DbSet<ShiftLog> ShiftLogs { get; set; }
+    public DbSet<ShiftRating> ShiftRatings { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -412,5 +413,34 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
             .WithOne(log => log.Shift)
             .HasForeignKey(log => log.ShiftLogId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<ShiftRating>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.Role)
+                  .HasConversion<string>();
+
+            entity.Property(e => e.RatingValue)
+                  .IsRequired();
+
+            entity.Property(e => e.CreatedAt)
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.ShID)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.RatedByUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.SRRatedByUserID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.RatedUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.CareRatedUserID)
+                  .OnDelete(DeleteBehavior.Restrict);
+        });
     }
 }

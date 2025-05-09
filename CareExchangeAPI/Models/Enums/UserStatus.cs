@@ -180,3 +180,12 @@ public enum ShiftOfferStatus
     [Display(Name = "Rejected")]
     Rejected
 }
+
+public enum RatingRole
+{
+    [Display(Name = "Candidate")]
+    Candidate,
+
+    [Display(Name = "Client User")]
+    ClientUser
+}

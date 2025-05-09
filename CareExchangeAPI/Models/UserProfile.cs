@@ -64,4 +64,7 @@ public class UserProfile
     public virtual ICollection<ShiftOffer> ShiftOffers { get; set; } = [];
     public virtual ICollection<CandidateAvailability> CandidateAvailabilities { get; set; } = [];
     public virtual ICollection<ShiftLog> ShiftLogsChanged { get; set; } = [];
+
+    public virtual ICollection<ShiftRating> RatingsGiven { get; set; } = [];
+    public virtual ICollection<ShiftRating> RatingsReceived { get; set; } = [];
 }

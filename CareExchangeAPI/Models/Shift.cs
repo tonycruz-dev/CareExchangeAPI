@@ -32,4 +32,5 @@ public class Shift
     public virtual ICollection<CalendarEvent> CalendarEvents { get; set; } = [];
     public virtual ICollection<ShiftOffer> ShiftOffers { get; set; } = [];
     public virtual ICollection<ShiftLog> ShiftLogs { get; set; } = [];
+    public virtual ICollection<ShiftRating> ShiftRatings { get; set; } = new List<ShiftRating>();
 }
