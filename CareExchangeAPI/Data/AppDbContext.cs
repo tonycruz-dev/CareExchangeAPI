@@ -28,6 +28,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<CandidateAvailability> CandidateAvailabilities { get; set; }
     public DbSet<ShiftLog> ShiftLogs { get; set; }
     public DbSet<ShiftRating> ShiftRatings { get; set; }
+    public DbSet<ShiftCancellation> ShiftCancellations { get; set; }
+    public DbSet<ClientPayment> ClientPayments { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -428,19 +430,67 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             entity.HasOne(e => e.Shift)
-                  .WithMany()
+                  .WithMany(s => s.ShiftRatings)
                   .HasForeignKey(e => e.ShID)
                   .OnDelete(DeleteBehavior.Cascade);
 
             entity.HasOne(e => e.RatedByUser)
-                  .WithMany()
+                  .WithMany(u => u.RatingsGiven)
                   .HasForeignKey(e => e.SRRatedByUserID)
                   .OnDelete(DeleteBehavior.Restrict);
 
             entity.HasOne(e => e.RatedUser)
-                  .WithMany()
+                  .WithMany(u => u.RatingsReceived)
                   .HasForeignKey(e => e.CareRatedUserID)
                   .OnDelete(DeleteBehavior.Restrict);
+        });
+        modelBuilder.Entity<ShiftCancellation>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.CancelledAt)
+                  .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            entity.Property(e => e.Approved)
+                  .HasDefaultValue(false);
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.SCId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.RequestedByUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.RequestedByUserID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+
+            entity.HasOne(e => e.ApprovedByUser)
+                  .WithMany()
+                  .HasForeignKey(e => e.ApprovedBy)
+                  .OnDelete(DeleteBehavior.SetNull);
+                  
+        });
+
+        modelBuilder.Entity<ClientPayment>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.InvoiceNumber).HasMaxLength(100);
+            entity.Property(e => e.AmountCharged).HasColumnType("decimal(10,2)").IsRequired();
+            entity.Property(e => e.PaymentDate).HasDefaultValueSql("CURRENT_TIMESTAMP");
+            entity.Property(e => e.PaymentMethod).HasMaxLength(50);
+            entity.Property(e => e.StripeTransactionID).HasMaxLength(255);
+
+            entity.HasOne(e => e.Client)
+                  .WithMany()
+                  .HasForeignKey(e => e.ClienPaytId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.CPShiftId)
+                  .OnDelete(DeleteBehavior.Cascade);
         });
     }
 }

@@ -67,4 +67,7 @@ public class UserProfile
 
     public virtual ICollection<ShiftRating> RatingsGiven { get; set; } = [];
     public virtual ICollection<ShiftRating> RatingsReceived { get; set; } = [];
+
+    public virtual ICollection<ShiftCancellation> CancellationRequests { get; set; } = [];
+    public virtual ICollection<ShiftCancellation> ApprovedCancellations { get; set; } = [];
 }

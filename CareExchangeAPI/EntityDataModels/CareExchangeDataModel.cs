@@ -31,6 +31,7 @@ public class CareExchangeDataModel
         builder.EntitySet<CandidateAvailability>("CandidateAvailabilities");
         builder.EntitySet<ShiftLog>("ShiftLogs");
         builder.EntitySet<ShiftRating>("ShiftRatings");
+        builder.EntitySet<ClientPayment>("ClientPayments");
 
 
 
