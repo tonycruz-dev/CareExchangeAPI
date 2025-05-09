@@ -189,3 +189,15 @@ public enum RatingRole
     [Display(Name = "Client User")]
     ClientUser
 }
+
+public enum PayoutStatus
+{
+    [Display(Name = "Pending")]
+    Pending,
+
+    [Display(Name = "Paid")]
+    Paid,
+
+    [Display(Name = "Failed")]
+    Failed
+}

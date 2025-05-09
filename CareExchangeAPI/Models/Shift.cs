@@ -35,4 +35,5 @@ public class Shift
     public virtual ICollection<ShiftRating> ShiftRatings { get; set; } = [];
     public virtual ICollection<ClientPayment> ClientPayments { get; set; } = [];
     public virtual ICollection<ShiftCancellation> ShiftCancellations { get; set; } = [];
+    public virtual ICollection<CandidatePayout> CandidatePayouts { get; set; } = [];
 }

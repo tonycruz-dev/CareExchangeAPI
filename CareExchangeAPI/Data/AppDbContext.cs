@@ -30,6 +30,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
     public DbSet<ShiftRating> ShiftRatings { get; set; }
     public DbSet<ShiftCancellation> ShiftCancellations { get; set; }
     public DbSet<ClientPayment> ClientPayments { get; set; }
+    public DbSet<CandidatePayout> CandidatePayouts { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -492,5 +493,41 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasForeignKey(e => e.CPShiftId)
                   .OnDelete(DeleteBehavior.Cascade);
         });
+
+        modelBuilder.Entity<CandidatePayout>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.Property(e => e.GrossAmount).HasColumnType("decimal(10,2)");
+            entity.Property(e => e.PlatformFee).HasColumnType("decimal(10,2)");
+            entity.Property(e => e.NetPayout).HasColumnType("decimal(10,2)");
+
+            entity.Property(e => e.PayoutStatus)
+                  .HasConversion<string>()
+                  .HasDefaultValue(PayoutStatus.Pending);
+
+            entity.Property(e => e.StripePayoutID).HasMaxLength(255);
+
+            entity.HasOne(e => e.Candidate)
+                  .WithMany()
+                  .HasForeignKey(e => e.CPShiftID)
+                  .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(e => e.Shift)
+                  .WithMany()
+                  .HasForeignKey(e => e.CPShiftID)
+                  .OnDelete(DeleteBehavior.Cascade);
+        });
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(u => u.CandidatePayouts)
+            .WithOne(p => p.Candidate)
+            .HasForeignKey(p => p.CPCandidateID)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Shift>()
+            .HasMany(s => s.CandidatePayouts)
+            .WithOne(p => p.Shift)
+            .HasForeignKey(p => p.CPShiftID)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

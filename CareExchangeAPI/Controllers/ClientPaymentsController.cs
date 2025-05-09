@@ -10,14 +10,9 @@ namespace CareExchangeAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class ClientPaymentsController : ControllerBase
+public class ClientPaymentsController(AppDbContext context) : ControllerBase
 {
-    private readonly AppDbContext _context;
-
-    public ClientPaymentsController(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     // POST: api/ClientPayments
     [HttpPost]

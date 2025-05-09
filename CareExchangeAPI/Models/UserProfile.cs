@@ -70,4 +70,6 @@ public class UserProfile
 
     public virtual ICollection<ShiftCancellation> CancellationRequests { get; set; } = [];
     public virtual ICollection<ShiftCancellation> ApprovedCancellations { get; set; } = [];
+
+    public virtual ICollection<CandidatePayout> CandidatePayouts { get; set; } = [];
 }

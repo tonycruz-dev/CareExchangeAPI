@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CareExchangeAPI.Models;
+﻿namespace CareExchangeAPI.Models;
 
 public class JobType
 {
@@ -8,4 +6,3 @@ public class JobType
 
     public string Name { get; set; } = string.Empty;
 }
-
