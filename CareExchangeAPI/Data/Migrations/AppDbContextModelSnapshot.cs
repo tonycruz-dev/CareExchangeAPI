@@ -608,12 +608,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.Property<int?>("ShiftId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserProfileId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserProfileId1")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ApprovedBy");
@@ -623,10 +617,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.HasIndex("SCId");
 
                     b.HasIndex("ShiftId");
-
-                    b.HasIndex("UserProfileId");
-
-                    b.HasIndex("UserProfileId1");
 
                     b.ToTable("ShiftCancellations");
                 });
@@ -720,7 +710,10 @@ namespace CareExchangeAPI.Data.Migrations
             modelBuilder.Entity("CareExchangeAPI.Models.ShiftRate", b =>
                 {
                     b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("HourlyRate")
                         .HasColumnType("decimal(6,2)");
@@ -731,12 +724,12 @@ namespace CareExchangeAPI.Data.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasDefaultValue("Base");
 
-                    b.Property<int?>("ShiftId")
+                    b.Property<int?>("ShiftRateId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ShiftId");
+                    b.HasIndex("ShiftRateId");
 
                     b.ToTable("ShiftRates");
                 });
@@ -884,6 +877,9 @@ namespace CareExchangeAPI.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("CurrentUserType")
+                        .HasColumnType("int");
+
                     b.Property<string>("DisplayName")
                         .HasColumnType("nvarchar(max)");
 
@@ -953,6 +949,9 @@ namespace CareExchangeAPI.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CurrentUserType")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
@@ -1397,12 +1396,12 @@ namespace CareExchangeAPI.Data.Migrations
             modelBuilder.Entity("CareExchangeAPI.Models.ShiftCancellation", b =>
                 {
                     b.HasOne("CareExchangeAPI.Models.UserProfile", "ApprovedByUser")
-                        .WithMany()
+                        .WithMany("ApprovedCancellations")
                         .HasForeignKey("ApprovedBy")
                         .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("CareExchangeAPI.Models.UserProfile", "RequestedByUser")
-                        .WithMany()
+                        .WithMany("CancellationRequests")
                         .HasForeignKey("RequestedByUserID")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
@@ -1416,14 +1415,6 @@ namespace CareExchangeAPI.Data.Migrations
                     b.HasOne("CareExchangeAPI.Models.Shift", null)
                         .WithMany("ShiftCancellations")
                         .HasForeignKey("ShiftId");
-
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", null)
-                        .WithMany("ApprovedCancellations")
-                        .HasForeignKey("UserProfileId");
-
-                    b.HasOne("CareExchangeAPI.Models.UserProfile", null)
-                        .WithMany("CancellationRequests")
-                        .HasForeignKey("UserProfileId1");
 
                     b.Navigation("ApprovedByUser");
 
@@ -1481,14 +1472,9 @@ namespace CareExchangeAPI.Data.Migrations
             modelBuilder.Entity("CareExchangeAPI.Models.ShiftRate", b =>
                 {
                     b.HasOne("CareExchangeAPI.Models.Shift", "Shift")
-                        .WithMany()
-                        .HasForeignKey("Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CareExchangeAPI.Models.Shift", null)
                         .WithMany("ShiftRates")
-                        .HasForeignKey("ShiftId");
+                        .HasForeignKey("ShiftRateId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Shift");
                 });

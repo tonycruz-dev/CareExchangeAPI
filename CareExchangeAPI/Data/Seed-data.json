@@ -1,0 +1,2064 @@
+{
+  "CareExchange": {
+    "CalendarEvents": [
+      {
+        "Id": 1,
+        "CalendarUserId": 1,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 101,
+        "CalendarUserId": 1,
+        "CalendarShiftId": 1,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 2,
+        "CalendarUserId": 2,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 102,
+        "CalendarUserId": 2,
+        "CalendarShiftId": 2,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 3,
+        "CalendarUserId": 3,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 103,
+        "CalendarUserId": 3,
+        "CalendarShiftId": 3,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 4,
+        "CalendarUserId": 4,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 104,
+        "CalendarUserId": 4,
+        "CalendarShiftId": 4,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 5,
+        "CalendarUserId": 5,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 105,
+        "CalendarUserId": 5,
+        "CalendarShiftId": 5,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 6,
+        "CalendarUserId": 6,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 106,
+        "CalendarUserId": 6,
+        "CalendarShiftId": 6,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 7,
+        "CalendarUserId": 7,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 107,
+        "CalendarUserId": 7,
+        "CalendarShiftId": 7,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 8,
+        "CalendarUserId": 8,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 108,
+        "CalendarUserId": 8,
+        "CalendarShiftId": 8,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 9,
+        "CalendarUserId": 9,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 109,
+        "CalendarUserId": 9,
+        "CalendarShiftId": 9,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      },
+      {
+        "Id": 10,
+        "CalendarUserId": 10,
+        "CalendarShiftId": null,
+        "EventDate": "2025-06-15",
+        "EventType": "Available"
+      },
+      {
+        "Id": 110,
+        "CalendarUserId": 10,
+        "CalendarShiftId": 10,
+        "EventDate": "2025-06-20",
+        "EventType": "BookedShift"
+      }
+    ],
+    "CandidateAvailabilities": [
+      {
+        "Id": 1,
+        "CndAviCandidateID": 1,
+        "Date": "2025-06-15",
+        "DayAvailable": false,
+        "NightAvailable": true
+      },
+      {
+        "Id": 2,
+        "CndAviCandidateID": 2,
+        "Date": "2025-06-15",
+        "DayAvailable": true,
+        "NightAvailable": false
+      },
+      {
+        "Id": 3,
+        "CndAviCandidateID": 3,
+        "Date": "2025-06-15",
+        "DayAvailable": false,
+        "NightAvailable": true
+      },
+      {
+        "Id": 4,
+        "CndAviCandidateID": 4,
+        "Date": "2025-06-15",
+        "DayAvailable": true,
+        "NightAvailable": false
+      },
+      {
+        "Id": 5,
+        "CndAviCandidateID": 5,
+        "Date": "2025-06-15",
+        "DayAvailable": false,
+        "NightAvailable": true
+      },
+      {
+        "Id": 6,
+        "CndAviCandidateID": 6,
+        "Date": "2025-06-15",
+        "DayAvailable": true,
+        "NightAvailable": false
+      },
+      {
+        "Id": 7,
+        "CndAviCandidateID": 7,
+        "Date": "2025-06-15",
+        "DayAvailable": false,
+        "NightAvailable": true
+      },
+      {
+        "Id": 8,
+        "CndAviCandidateID": 8,
+        "Date": "2025-06-15",
+        "DayAvailable": true,
+        "NightAvailable": false
+      },
+      {
+        "Id": 9,
+        "CndAviCandidateID": 9,
+        "Date": "2025-06-15",
+        "DayAvailable": false,
+        "NightAvailable": true
+      },
+      {
+        "Id": 10,
+        "CndAviCandidateID": 10,
+        "Date": "2025-06-15",
+        "DayAvailable": true,
+        "NightAvailable": false
+      }
+    ],
+    "CandidateDocuments": [
+      {
+        "Id": 1,
+        "CandidateDocID": 1,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/1_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 2,
+        "CandidateDocID": 2,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/2_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 3,
+        "CandidateDocID": 3,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/3_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 4,
+        "CandidateDocID": 4,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/4_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 5,
+        "CandidateDocID": 5,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/5_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 6,
+        "CandidateDocID": 6,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/6_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 7,
+        "CandidateDocID": 7,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/7_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 8,
+        "CandidateDocID": 8,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/8_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 9,
+        "CandidateDocID": 9,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/9_dbs.pdf",
+        "IsRequired": true
+      },
+      {
+        "Id": 10,
+        "CandidateDocID": 10,
+        "CanDocID": 1,
+        "Status": "Approved",
+        "ExpiryDate": "2026-05-10",
+        "UploadedAt": "2025-04-10T10:00:00",
+        "ReviewedAt": "2025-04-11T10:00:00",
+        "ReviewedBy": 15,
+        "FilePath": "/docs/10_dbs.pdf",
+        "IsRequired": true
+      }
+    ],
+    "CandidatePayouts": [
+      {
+        "Id": 1,
+        "CPCandidateID": 1,
+        "CPShiftID": 1,
+        "GrossAmount": 160.0,
+        "PlatformFee": 10.0,
+        "NetPayout": 150.0,
+        "PayoutStatus": "Paid",
+        "PayoutDate": "2025-05-10T09:00:00",
+        "StripePayoutID": "payout_1"
+      },
+      {
+        "Id": 2,
+        "CPCandidateID": 2,
+        "CPShiftID": 2,
+        "GrossAmount": 160.0,
+        "PlatformFee": 10.0,
+        "NetPayout": 150.0,
+        "PayoutStatus": "Paid",
+        "PayoutDate": "2025-05-10T09:00:00",
+        "StripePayoutID": "payout_2"
+      },
+      {
+        "Id": 3,
+        "CPCandidateID": 3,
+        "CPShiftID": 3,
+        "GrossAmount": 160.0,
+        "PlatformFee": 10.0,
+        "NetPayout": 150.0,
+        "PayoutStatus": "Paid",
+        "PayoutDate": "2025-05-10T09:00:00",
+        "StripePayoutID": "payout_3"
+      },
+      {
+        "Id": 4,
+        "CPCandidateID": 4,
+        "CPShiftID": 4,
+        "GrossAmount": 160.0,
+        "PlatformFee": 10.0,
+        "NetPayout": 150.0,
+        "PayoutStatus": "Paid",
+        "PayoutDate": "2025-05-10T09:00:00",
+        "StripePayoutID": "payout_4"
+      },
+      {
+        "Id": 5,
+        "CPCandidateID": 5,
+        "CPShiftID": 5,
+        "GrossAmount": 160.0,
+        "PlatformFee": 10.0,
+        "NetPayout": 150.0,
+        "PayoutStatus": "Paid",
+        "PayoutDate": "2025-05-10T09:00:00",
+        "StripePayoutID": "payout_5"
+      }
+    ],
+    "CareHomeClientLocations": [
+      {
+        "LocationID": 101,
+        "CareHomeClientID": 1,
+        "Name": "Elm Care Home - Main Wing",
+        "Address": "174 Elm Rd, London",
+        "City": "London",
+        "PostCode": "E5 4XY",
+        "DefaultStartTime": "08:00:00",
+        "DefaultEndTime": "20:00:00",
+        "Latitude": 51.522656,
+        "Longitude": 0.064724,
+        "Status": "Active"
+      },
+      {
+        "LocationID": 102,
+        "CareHomeClientID": 2,
+        "Name": "Oak Nursing - Main Wing",
+        "Address": "122 Oak Rd, London",
+        "City": "London",
+        "PostCode": "E9 2XY",
+        "DefaultStartTime": "08:00:00",
+        "DefaultEndTime": "20:00:00",
+        "Latitude": 51.453986,
+        "Longitude": -0.055787,
+        "Status": "Active"
+      },
+      {
+        "LocationID": 103,
+        "CareHomeClientID": 3,
+        "Name": "Pine Retirement - Main Wing",
+        "Address": "68 Pine Rd, London",
+        "City": "London",
+        "PostCode": "E1 4XY",
+        "DefaultStartTime": "08:00:00",
+        "DefaultEndTime": "20:00:00",
+        "Latitude": 51.416728,
+        "Longitude": -0.175358,
+        "Status": "Active"
+      },
+      {
+        "LocationID": 104,
+        "CareHomeClientID": 4,
+        "Name": "Cedar Lodge - Main Wing",
+        "Address": "184 Cedar Rd, London",
+        "City": "London",
+        "PostCode": "E19 6XY",
+        "DefaultStartTime": "08:00:00",
+        "DefaultEndTime": "20:00:00",
+        "Latitude": 51.467257,
+        "Longitude": -0.185972,
+        "Status": "Active"
+      }
+    ],
+    "CareHomeClients": [
+      {
+        "Id": 1,
+        "Name": "Elm Care Home",
+        "LegalEntity": "Elm Care Home Ltd.",
+        "CompanyNumber": "59320625",
+        "Email": "elm@carehome.com",
+        "Phone": "02031827720",
+        "CreatedAt": "2025-05-12T08:03:32.001014",
+        "CareHomeClientUserID": "ff63a282-11b9-4143-8ea2-08620ace1fb8"
+      },
+      {
+        "Id": 2,
+        "Name": "Oak Nursing",
+        "LegalEntity": "Oak Nursing Ltd.",
+        "CompanyNumber": "41006857",
+        "Email": "oak@carehome.com",
+        "Phone": "02038000957",
+        "CreatedAt": "2025-05-12T08:03:32.001024",
+        "CareHomeClientUserID": "5f3e4fd7-a3f1-434a-ab8c-de72a948179d"
+      },
+      {
+        "Id": 3,
+        "Name": "Pine Retirement",
+        "LegalEntity": "Pine Retirement Ltd.",
+        "CompanyNumber": "47124394",
+        "Email": "pine@carehome.com",
+        "Phone": "02035687014",
+        "CreatedAt": "2025-05-12T08:03:32.001028",
+        "CareHomeClientUserID": "207ae825-b67b-4934-a317-f6185e4a6135"
+      },
+      {
+        "Id": 4,
+        "Name": "Cedar Lodge",
+        "LegalEntity": "Cedar Lodge Ltd.",
+        "CompanyNumber": "15538610",
+        "Email": "cedar@carehome.com",
+        "Phone": "02036383565",
+        "CreatedAt": "2025-05-12T08:03:32.001032",
+        "CareHomeClientUserID": "ee4da79e-e87e-4aa7-91d4-bbe16c3ec9db"
+      }
+    ],
+    "ClientPayments": [
+      {
+        "Id": 1,
+        "ClienPaytId": 1,
+        "CPShiftId": 1,
+        "InvoiceNumber": "INV-1001",
+        "AmountCharged": 170.0,
+        "PaymentDate": "2025-05-10T09:00:00",
+        "PaymentMethod": "Card",
+        "StripeTransactionID": "txn_1"
+      },
+      {
+        "Id": 2,
+        "ClienPaytId": 2,
+        "CPShiftId": 2,
+        "InvoiceNumber": "INV-1002",
+        "AmountCharged": 170.0,
+        "PaymentDate": "2025-05-10T09:00:00",
+        "PaymentMethod": "Card",
+        "StripeTransactionID": "txn_2"
+      },
+      {
+        "Id": 3,
+        "ClienPaytId": 3,
+        "CPShiftId": 3,
+        "InvoiceNumber": "INV-1003",
+        "AmountCharged": 170.0,
+        "PaymentDate": "2025-05-10T09:00:00",
+        "PaymentMethod": "Card",
+        "StripeTransactionID": "txn_3"
+      },
+      {
+        "Id": 4,
+        "ClienPaytId": 4,
+        "CPShiftId": 4,
+        "InvoiceNumber": "INV-1004",
+        "AmountCharged": 170.0,
+        "PaymentDate": "2025-05-10T09:00:00",
+        "PaymentMethod": "Card",
+        "StripeTransactionID": "txn_4"
+      },
+      {
+        "Id": 5,
+        "ClienPaytId": 1,
+        "CPShiftId": 5,
+        "InvoiceNumber": "INV-1005",
+        "AmountCharged": 170.0,
+        "PaymentDate": "2025-05-10T09:00:00",
+        "PaymentMethod": "Card",
+        "StripeTransactionID": "txn_5"
+      }
+    ],
+    "Documents": [
+      {
+        "Id": 1,
+        "Name": "DBS Certificate",
+        "Required": true,
+        "ExpiryDays": 365,
+        "ClientVisible": false,
+        "CandidateVisible": true
+      },
+      {
+        "Id": 2,
+        "Name": "Right to Work",
+        "Required": true,
+        "ExpiryDays": null,
+        "ClientVisible": false,
+        "CandidateVisible": true
+      },
+      {
+        "Id": 3,
+        "Name": "Nursing License",
+        "Required": false,
+        "ExpiryDays": 730,
+        "ClientVisible": true,
+        "CandidateVisible": true
+      }
+    ],
+    "JobTypes": [
+      {
+        "Id": 1,
+        "Name": "Nurse"
+      },
+      {
+        "Id": 2,
+        "Name": "Healthcare Assistant"
+      },
+      {
+        "Id": 3,
+        "Name": "Support Worker"
+      },
+      {
+        "Id": 4,
+        "Name": "Cleaner"
+      },
+      {
+        "Id": 5,
+        "Name": "Chef"
+      }
+    ],
+    "Skills": [
+      {
+        "Id": 1,
+        "Name": "Medication Administration"
+      },
+      {
+        "Id": 2,
+        "Name": "Personal Care"
+      },
+      {
+        "Id": 3,
+        "Name": "Manual Handling"
+      },
+      {
+        "Id": 4,
+        "Name": "Infection Control"
+      },
+      {
+        "Id": 5,
+        "Name": "Dementia Care"
+      },
+      {
+        "Id": 6,
+        "Name": "First Aid"
+      },
+      {
+        "Id": 7,
+        "Name": "Safeguarding"
+      },
+      {
+        "Id": 8,
+        "Name": "CPR"
+      },
+      {
+        "Id": 9,
+        "Name": "Food Hygiene"
+      },
+      {
+        "Id": 10,
+        "Name": "Care Planning"
+      }
+    ],
+    "Messages": [
+      {
+        "Id": 1,
+        "SenderID": 15,
+        "ReceiverID": 1,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 2,
+        "SenderID": 15,
+        "ReceiverID": 2,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 3,
+        "SenderID": 15,
+        "ReceiverID": 3,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 4,
+        "SenderID": 15,
+        "ReceiverID": 4,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 5,
+        "SenderID": 15,
+        "ReceiverID": 5,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 6,
+        "SenderID": 15,
+        "ReceiverID": 6,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 7,
+        "SenderID": 15,
+        "ReceiverID": 7,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 8,
+        "SenderID": 15,
+        "ReceiverID": 8,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 9,
+        "SenderID": 15,
+        "ReceiverID": 9,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      },
+      {
+        "Id": 10,
+        "SenderID": 15,
+        "ReceiverID": 10,
+        "Content": "Welcome to WashPass. Your first shift is coming up!",
+        "IsBroadcast": false,
+        "SentAt": "2025-05-01T08:00:00"
+      }
+    ],
+    "Notifications": [
+      {
+        "Id": 1,
+        "NotificationUserID": 1,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #1. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 2,
+        "NotificationUserID": 2,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #2. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 3,
+        "NotificationUserID": 3,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #3. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 4,
+        "NotificationUserID": 4,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #4. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 5,
+        "NotificationUserID": 5,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #5. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 6,
+        "NotificationUserID": 6,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #6. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 7,
+        "NotificationUserID": 7,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #7. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 8,
+        "NotificationUserID": 8,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #8. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 9,
+        "NotificationUserID": 9,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #9. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      },
+      {
+        "Id": 10,
+        "NotificationUserID": 10,
+        "RecipientType": "Candidate",
+        "TypeOfNotification": "ShiftAssigned",
+        "Title": "New Shift Assigned",
+        "Message": "You've been assigned to shift #10. Please confirm.",
+        "IsRead": false,
+        "CreatedAt": "2025-05-01T09:00:00"
+      }
+    ],
+    "ShiftAssignments": [
+      {
+        "Id": 1,
+        "FromShiftId": 1,
+        "ProfileId": 1,
+        "Status": "Completed"
+      },
+      {
+        "Id": 2,
+        "FromShiftId": 2,
+        "ProfileId": 2,
+        "Status": "Completed"
+      },
+      {
+        "Id": 3,
+        "FromShiftId": 3,
+        "ProfileId": 3,
+        "Status": "Completed"
+      },
+      {
+        "Id": 4,
+        "FromShiftId": 4,
+        "ProfileId": 4,
+        "Status": "Completed"
+      },
+      {
+        "Id": 5,
+        "FromShiftId": 5,
+        "ProfileId": 5,
+        "Status": "Completed"
+      }
+    ],
+    "ShiftCancellations": [
+      {
+        "Id": 1,
+        "SCId": 1,
+        "RequestedByUserID": 1,
+        "Reason": "Personal emergency",
+        "CancelledAt": "2025-05-10T09:00:00",
+        "Approved": true,
+        "ApprovedBy": 11
+      },
+      {
+        "Id": 2,
+        "SCId": 2,
+        "RequestedByUserID": 2,
+        "Reason": "Personal emergency",
+        "CancelledAt": "2025-05-10T09:00:00",
+        "Approved": true,
+        "ApprovedBy": 12
+      },
+      {
+        "Id": 3,
+        "SCId": 3,
+        "RequestedByUserID": 3,
+        "Reason": "Personal emergency",
+        "CancelledAt": "2025-05-10T09:00:00",
+        "Approved": true,
+        "ApprovedBy": 13
+      },
+      {
+        "Id": 4,
+        "SCId": 4,
+        "RequestedByUserID": 4,
+        "Reason": "Personal emergency",
+        "CancelledAt": "2025-05-10T09:00:00",
+        "Approved": true,
+        "ApprovedBy": 14
+      },
+      {
+        "Id": 5,
+        "SCId": 5,
+        "RequestedByUserID": 5,
+        "Reason": "Personal emergency",
+        "CancelledAt": "2025-05-10T09:00:00",
+        "Approved": true,
+        "ApprovedBy": 11
+      }
+    ],
+    "ShiftLogs": [
+      {
+        "Id": 1,
+        "ShiftLogId": 1,
+        "ShiftLogUserID": 11,
+        "OldStatus": "Booked",
+        "NewStatus": "Completed",
+        "ChangeReason": "Shift worked successfully",
+        "Timestamp": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 2,
+        "ShiftLogId": 2,
+        "ShiftLogUserID": 12,
+        "OldStatus": "Booked",
+        "NewStatus": "Completed",
+        "ChangeReason": "Shift worked successfully",
+        "Timestamp": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 3,
+        "ShiftLogId": 3,
+        "ShiftLogUserID": 13,
+        "OldStatus": "Booked",
+        "NewStatus": "Completed",
+        "ChangeReason": "Shift worked successfully",
+        "Timestamp": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 4,
+        "ShiftLogId": 4,
+        "ShiftLogUserID": 14,
+        "OldStatus": "Booked",
+        "NewStatus": "Completed",
+        "ChangeReason": "Shift worked successfully",
+        "Timestamp": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 5,
+        "ShiftLogId": 5,
+        "ShiftLogUserID": 11,
+        "OldStatus": "Booked",
+        "NewStatus": "Completed",
+        "ChangeReason": "Shift worked successfully",
+        "Timestamp": "2025-05-10T09:00:00"
+      }
+    ],
+    "ShiftOffers": [
+      {
+        "Id": 1,
+        "ShiftOfferShiftID": 1,
+        "ShiftOfferCandidateID": 1,
+        "OfferStatus": "Accepted",
+        "OfferedAt": "2025-05-10T09:00:00",
+        "RespondedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 2,
+        "ShiftOfferShiftID": 2,
+        "ShiftOfferCandidateID": 2,
+        "OfferStatus": "Accepted",
+        "OfferedAt": "2025-05-10T09:00:00",
+        "RespondedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 3,
+        "ShiftOfferShiftID": 3,
+        "ShiftOfferCandidateID": 3,
+        "OfferStatus": "Accepted",
+        "OfferedAt": "2025-05-10T09:00:00",
+        "RespondedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 4,
+        "ShiftOfferShiftID": 4,
+        "ShiftOfferCandidateID": 4,
+        "OfferStatus": "Accepted",
+        "OfferedAt": "2025-05-10T09:00:00",
+        "RespondedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 5,
+        "ShiftOfferShiftID": 5,
+        "ShiftOfferCandidateID": 5,
+        "OfferStatus": "Accepted",
+        "OfferedAt": "2025-05-10T09:00:00",
+        "RespondedAt": "2025-05-10T09:00:00"
+      }
+    ],
+    "ShiftRates": [
+      {
+        "Id": 1,
+        "ShiftId": 1,
+        "RateType": "Weekend",
+        "HourlyRate": 14.52
+      },
+      {
+        "Id": 2,
+        "ShiftId": 1,
+        "RateType": "Overtime",
+        "HourlyRate": 15.13
+      },
+      {
+        "Id": 3,
+        "ShiftId": 2,
+        "RateType": "Night",
+        "HourlyRate": 19.94
+      },
+      {
+        "Id": 4,
+        "ShiftId": 2,
+        "RateType": "Base",
+        "HourlyRate": 19.86
+      },
+      {
+        "Id": 5,
+        "ShiftId": 3,
+        "RateType": "Base",
+        "HourlyRate": 21.5
+      },
+      {
+        "Id": 6,
+        "ShiftId": 3,
+        "RateType": "Overtime",
+        "HourlyRate": 16.18
+      },
+      {
+        "Id": 7,
+        "ShiftId": 4,
+        "RateType": "Base",
+        "HourlyRate": 14.26
+      },
+      {
+        "Id": 8,
+        "ShiftId": 4,
+        "RateType": "Weekend",
+        "HourlyRate": 17.94
+      },
+      {
+        "Id": 9,
+        "ShiftId": 5,
+        "RateType": "Base",
+        "HourlyRate": 15.38
+      },
+      {
+        "Id": 10,
+        "ShiftId": 5,
+        "RateType": "Base",
+        "HourlyRate": 16.93
+      },
+      {
+        "Id": 11,
+        "ShiftId": 6,
+        "RateType": "Overtime",
+        "HourlyRate": 20.59
+      },
+      {
+        "Id": 12,
+        "ShiftId": 6,
+        "RateType": "Overtime",
+        "HourlyRate": 16.75
+      },
+      {
+        "Id": 13,
+        "ShiftId": 7,
+        "RateType": "Base",
+        "HourlyRate": 16.9
+      },
+      {
+        "Id": 14,
+        "ShiftId": 7,
+        "RateType": "Weekend",
+        "HourlyRate": 14.24
+      },
+      {
+        "Id": 15,
+        "ShiftId": 8,
+        "RateType": "Night",
+        "HourlyRate": 14.1
+      },
+      {
+        "Id": 16,
+        "ShiftId": 8,
+        "RateType": "Night",
+        "HourlyRate": 17.26
+      },
+      {
+        "Id": 17,
+        "ShiftId": 9,
+        "RateType": "Base",
+        "HourlyRate": 20.98
+      },
+      {
+        "Id": 18,
+        "ShiftId": 9,
+        "RateType": "Weekend",
+        "HourlyRate": 14.21
+      },
+      {
+        "Id": 19,
+        "ShiftId": 10,
+        "RateType": "Overtime",
+        "HourlyRate": 21.29
+      },
+      {
+        "Id": 20,
+        "ShiftId": 10,
+        "RateType": "Base",
+        "HourlyRate": 21.89
+      },
+      {
+        "Id": 21,
+        "ShiftId": 11,
+        "RateType": "Overtime",
+        "HourlyRate": 19.08
+      },
+      {
+        "Id": 22,
+        "ShiftId": 11,
+        "RateType": "Overtime",
+        "HourlyRate": 14.05
+      },
+      {
+        "Id": 23,
+        "ShiftId": 12,
+        "RateType": "Weekend",
+        "HourlyRate": 20.02
+      },
+      {
+        "Id": 24,
+        "ShiftId": 12,
+        "RateType": "Base",
+        "HourlyRate": 14.15
+      },
+      {
+        "Id": 25,
+        "ShiftId": 13,
+        "RateType": "Base",
+        "HourlyRate": 16.68
+      },
+      {
+        "Id": 26,
+        "ShiftId": 13,
+        "RateType": "Weekend",
+        "HourlyRate": 14.27
+      },
+      {
+        "Id": 27,
+        "ShiftId": 14,
+        "RateType": "Overtime",
+        "HourlyRate": 16.08
+      },
+      {
+        "Id": 28,
+        "ShiftId": 14,
+        "RateType": "Overtime",
+        "HourlyRate": 17.05
+      },
+      {
+        "Id": 29,
+        "ShiftId": 15,
+        "RateType": "Weekend",
+        "HourlyRate": 14.25
+      },
+      {
+        "Id": 30,
+        "ShiftId": 15,
+        "RateType": "Night",
+        "HourlyRate": 21.01
+      },
+      {
+        "Id": 31,
+        "ShiftId": 16,
+        "RateType": "Night",
+        "HourlyRate": 21.16
+      },
+      {
+        "Id": 32,
+        "ShiftId": 16,
+        "RateType": "Night",
+        "HourlyRate": 20.47
+      },
+      {
+        "Id": 33,
+        "ShiftId": 17,
+        "RateType": "Base",
+        "HourlyRate": 17.88
+      },
+      {
+        "Id": 34,
+        "ShiftId": 17,
+        "RateType": "Base",
+        "HourlyRate": 15.64
+      },
+      {
+        "Id": 35,
+        "ShiftId": 18,
+        "RateType": "Night",
+        "HourlyRate": 18.69
+      },
+      {
+        "Id": 36,
+        "ShiftId": 18,
+        "RateType": "Night",
+        "HourlyRate": 14.24
+      },
+      {
+        "Id": 37,
+        "ShiftId": 19,
+        "RateType": "Night",
+        "HourlyRate": 21.86
+      },
+      {
+        "Id": 38,
+        "ShiftId": 19,
+        "RateType": "Overtime",
+        "HourlyRate": 21.96
+      },
+      {
+        "Id": 39,
+        "ShiftId": 20,
+        "RateType": "Weekend",
+        "HourlyRate": 21.63
+      },
+      {
+        "Id": 40,
+        "ShiftId": 20,
+        "RateType": "Base",
+        "HourlyRate": 17.37
+      }
+    ],
+    "ShiftRatings": [
+      {
+        "Id": 1,
+        "ShID": 1,
+        "SRRatedByUserID": 1,
+        "CareRatedUserID": 11,
+        "Role": "Candidate",
+        "RatingValue": 5,
+        "Feedback": "Great experience!",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 2,
+        "ShID": 2,
+        "SRRatedByUserID": 2,
+        "CareRatedUserID": 12,
+        "Role": "Candidate",
+        "RatingValue": 5,
+        "Feedback": "Great experience!",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 3,
+        "ShID": 3,
+        "SRRatedByUserID": 3,
+        "CareRatedUserID": 13,
+        "Role": "Candidate",
+        "RatingValue": 5,
+        "Feedback": "Great experience!",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 4,
+        "ShID": 4,
+        "SRRatedByUserID": 4,
+        "CareRatedUserID": 14,
+        "Role": "Candidate",
+        "RatingValue": 5,
+        "Feedback": "Great experience!",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 5,
+        "ShID": 5,
+        "SRRatedByUserID": 5,
+        "CareRatedUserID": 11,
+        "Role": "Candidate",
+        "RatingValue": 5,
+        "Feedback": "Great experience!",
+        "CreatedAt": "2025-05-10T09:00:00"
+      }
+    ],
+    "Shifts": [
+      {
+        "Id": 1,
+        "LocationID": 4,
+        "JobTypeID": 1,
+        "Status": "Unfilled",
+        "StartTime": "2025-05-25T09:10:31.506521",
+        "EndTime": "2025-05-25T19:10:31.506521",
+        "BreakMinutes": 60,
+        "HourlyRate": 16.13,
+        "Notes": "Auto-generated shift 1",
+        "CreatedByClientUserID": 11
+      },
+      {
+        "Id": 2,
+        "LocationID": 4,
+        "JobTypeID": 2,
+        "Status": "NeverFilled",
+        "StartTime": "2025-05-19T09:10:31.506571",
+        "EndTime": "2025-05-19T19:10:31.506571",
+        "BreakMinutes": 0,
+        "HourlyRate": 17.7,
+        "Notes": "Auto-generated shift 2",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 3,
+        "LocationID": 2,
+        "JobTypeID": 5,
+        "Status": "AwaitingClient",
+        "StartTime": "2025-05-22T09:10:31.506592",
+        "EndTime": "2025-05-22T21:10:31.506592",
+        "BreakMinutes": 60,
+        "HourlyRate": 14.38,
+        "Notes": "Auto-generated shift 3",
+        "CreatedByClientUserID": 11
+      },
+      {
+        "Id": 4,
+        "LocationID": 1,
+        "JobTypeID": 4,
+        "Status": "InProgress",
+        "StartTime": "2025-05-21T09:10:31.506622",
+        "EndTime": "2025-05-21T21:10:31.506622",
+        "BreakMinutes": 30,
+        "HourlyRate": 16.57,
+        "Notes": "Auto-generated shift 4",
+        "CreatedByClientUserID": 14
+      },
+      {
+        "Id": 5,
+        "LocationID": 1,
+        "JobTypeID": 4,
+        "Status": "NeverFilled",
+        "StartTime": "2025-05-13T09:10:31.506641",
+        "EndTime": "2025-05-13T19:10:31.506641",
+        "BreakMinutes": 60,
+        "HourlyRate": 14.76,
+        "Notes": "Auto-generated shift 5",
+        "CreatedByClientUserID": 13
+      },
+      {
+        "Id": 6,
+        "LocationID": 2,
+        "JobTypeID": 4,
+        "Status": "Cancelled",
+        "StartTime": "2025-05-20T09:10:31.506659",
+        "EndTime": "2025-05-20T17:10:31.506659",
+        "BreakMinutes": 60,
+        "HourlyRate": 15.52,
+        "Notes": "Auto-generated shift 6",
+        "CreatedByClientUserID": 14
+      },
+      {
+        "Id": 7,
+        "LocationID": 1,
+        "JobTypeID": 1,
+        "Status": "Booked",
+        "StartTime": "2025-05-22T09:10:31.506678",
+        "EndTime": "2025-05-22T21:10:31.506678",
+        "BreakMinutes": 0,
+        "HourlyRate": 17.13,
+        "Notes": "Auto-generated shift 7",
+        "CreatedByClientUserID": 14
+      },
+      {
+        "Id": 8,
+        "LocationID": 3,
+        "JobTypeID": 5,
+        "Status": "Invoiced",
+        "StartTime": "2025-05-13T09:10:31.506700",
+        "EndTime": "2025-05-13T19:10:31.506700",
+        "BreakMinutes": 0,
+        "HourlyRate": 14.34,
+        "Notes": "Auto-generated shift 8",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 9,
+        "LocationID": 3,
+        "JobTypeID": 4,
+        "Status": "Rejected",
+        "StartTime": "2025-05-20T09:10:31.506723",
+        "EndTime": "2025-05-20T21:10:31.506723",
+        "BreakMinutes": 60,
+        "HourlyRate": 15.2,
+        "Notes": "Auto-generated shift 9",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 10,
+        "LocationID": 3,
+        "JobTypeID": 5,
+        "Status": "Rejected",
+        "StartTime": "2025-05-16T09:10:31.506743",
+        "EndTime": "2025-05-16T19:10:31.506743",
+        "BreakMinutes": 0,
+        "HourlyRate": 17.65,
+        "Notes": "Auto-generated shift 10",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 11,
+        "LocationID": 2,
+        "JobTypeID": 4,
+        "Status": "Booked",
+        "StartTime": "2025-05-22T09:10:31.506761",
+        "EndTime": "2025-05-22T19:10:31.506761",
+        "BreakMinutes": 0,
+        "HourlyRate": 15.0,
+        "Notes": "Auto-generated shift 11",
+        "CreatedByClientUserID": 13
+      },
+      {
+        "Id": 12,
+        "LocationID": 3,
+        "JobTypeID": 3,
+        "Status": "Rejected",
+        "StartTime": "2025-05-21T09:10:31.506778",
+        "EndTime": "2025-05-21T17:10:31.506778",
+        "BreakMinutes": 60,
+        "HourlyRate": 17.32,
+        "Notes": "Auto-generated shift 12",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 13,
+        "LocationID": 4,
+        "JobTypeID": 4,
+        "Status": "Booked",
+        "StartTime": "2025-05-17T09:10:31.506795",
+        "EndTime": "2025-05-17T19:10:31.506795",
+        "BreakMinutes": 30,
+        "HourlyRate": 16.26,
+        "Notes": "Auto-generated shift 13",
+        "CreatedByClientUserID": 14
+      },
+      {
+        "Id": 14,
+        "LocationID": 4,
+        "JobTypeID": 1,
+        "Status": "AwaitingClient",
+        "StartTime": "2025-05-16T09:10:31.506812",
+        "EndTime": "2025-05-16T21:10:31.506812",
+        "BreakMinutes": 60,
+        "HourlyRate": 16.79,
+        "Notes": "Auto-generated shift 14",
+        "CreatedByClientUserID": 11
+      },
+      {
+        "Id": 15,
+        "LocationID": 4,
+        "JobTypeID": 5,
+        "Status": "Rejected",
+        "StartTime": "2025-05-18T09:10:31.506829",
+        "EndTime": "2025-05-18T19:10:31.506829",
+        "BreakMinutes": 0,
+        "HourlyRate": 17.21,
+        "Notes": "Auto-generated shift 15",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 16,
+        "LocationID": 3,
+        "JobTypeID": 2,
+        "Status": "Booked",
+        "StartTime": "2025-05-25T09:10:31.506846",
+        "EndTime": "2025-05-25T19:10:31.506846",
+        "BreakMinutes": 60,
+        "HourlyRate": 18.0,
+        "Notes": "Auto-generated shift 16",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 17,
+        "LocationID": 4,
+        "JobTypeID": 3,
+        "Status": "Booked",
+        "StartTime": "2025-05-23T09:10:31.506862",
+        "EndTime": "2025-05-23T21:10:31.506862",
+        "BreakMinutes": 0,
+        "HourlyRate": 14.5,
+        "Notes": "Auto-generated shift 17",
+        "CreatedByClientUserID": 11
+      },
+      {
+        "Id": 18,
+        "LocationID": 3,
+        "JobTypeID": 5,
+        "Status": "AwaitingCandidate",
+        "StartTime": "2025-05-14T09:10:31.506878",
+        "EndTime": "2025-05-14T17:10:31.506878",
+        "BreakMinutes": 0,
+        "HourlyRate": 16.71,
+        "Notes": "Auto-generated shift 18",
+        "CreatedByClientUserID": 12
+      },
+      {
+        "Id": 19,
+        "LocationID": 2,
+        "JobTypeID": 4,
+        "Status": "Invoiced",
+        "StartTime": "2025-05-20T09:10:31.506895",
+        "EndTime": "2025-05-20T21:10:31.506895",
+        "BreakMinutes": 30,
+        "HourlyRate": 17.22,
+        "Notes": "Auto-generated shift 19",
+        "CreatedByClientUserID": 11
+      },
+      {
+        "Id": 20,
+        "LocationID": 2,
+        "JobTypeID": 4,
+        "Status": "Unfilled",
+        "StartTime": "2025-05-26T09:10:31.506911",
+        "EndTime": "2025-05-26T17:10:31.506911",
+        "BreakMinutes": 30,
+        "HourlyRate": 15.83,
+        "Notes": "Auto-generated shift 20",
+        "CreatedByClientUserID": 13
+      }
+    ],
+    "Timesheets": [
+      {
+        "Id": 1,
+        "TimesheetShiftId": 1,
+        "TimesheetUserPrifileId": 1,
+        "TimesheetClientID": 1,
+        "SubmittedByCandidate": true,
+        "ApprovedByClient": true,
+        "Rejected": false,
+        "SignedOffBy": "Manager",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 2,
+        "TimesheetShiftId": 2,
+        "TimesheetUserPrifileId": 2,
+        "TimesheetClientID": 2,
+        "SubmittedByCandidate": true,
+        "ApprovedByClient": true,
+        "Rejected": false,
+        "SignedOffBy": "Manager",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 3,
+        "TimesheetShiftId": 3,
+        "TimesheetUserPrifileId": 3,
+        "TimesheetClientID": 3,
+        "SubmittedByCandidate": true,
+        "ApprovedByClient": true,
+        "Rejected": false,
+        "SignedOffBy": "Manager",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 4,
+        "TimesheetShiftId": 4,
+        "TimesheetUserPrifileId": 4,
+        "TimesheetClientID": 4,
+        "SubmittedByCandidate": true,
+        "ApprovedByClient": true,
+        "Rejected": false,
+        "SignedOffBy": "Manager",
+        "CreatedAt": "2025-05-10T09:00:00"
+      },
+      {
+        "Id": 5,
+        "TimesheetShiftId": 5,
+        "TimesheetUserPrifileId": 5,
+        "TimesheetClientID": 1,
+        "SubmittedByCandidate": true,
+        "ApprovedByClient": true,
+        "Rejected": false,
+        "SignedOffBy": "Manager",
+        "CreatedAt": "2025-05-10T09:00:00"
+      }
+    ],
+    "UserProfiles": [
+        {
+          "Id": 1,
+          "ProfileUserID": "f66af710-4dec-419e-b8a0-81245075d981",
+          "FirstName": "Alice",
+          "LastName": "Smith",
+          "PreferredName": "Alice",
+          "CurrentUserType": "Candidate",
+          "Email": "alice.smith@example.com",
+          "Mobile": "07780436210",
+          "PhoneVisibleToClients": true,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.032758",
+          "Status": "Active",
+          "HomeAddress": "82 Smith Street",
+          "HomeCity": "London",
+          "HomePostCode": "E7 6XY",
+          "WorkingAddress": "85 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E2 3XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2013-10-18",
+          "StartedAtCX": "2022-08-27",
+          "PayrollID": "PAY3736"
+        },
+        {
+          "Id": 2,
+          "ProfileUserID": "f3b7dace-5316-4709-820d-f4db8135a945",
+          "FirstName": "Bob",
+          "LastName": "Johnson",
+          "PreferredName": "Bob",
+          "CurrentUserType": "Candidate",
+          "Email": "bob.johnson@example.com",
+          "Mobile": "07960138185",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033011",
+          "Status": "Suspended",
+          "HomeAddress": "46 Johnson Street",
+          "HomeCity": "London",
+          "HomePostCode": "E13 7XY",
+          "WorkingAddress": "13 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E13 5XY",
+          "EmploymentType": "Umbrella",
+          "DateOfBirth": "2003-02-11",
+          "StartedAtCX": "2023-06-09",
+          "PayrollID": "PAY8065"
+        },
+        {
+          "Id": 3,
+          "ProfileUserID": "5ebcfd6d-dcea-480b-817b-98f415de3934",
+          "FirstName": "Charlie",
+          "LastName": "Williams",
+          "PreferredName": "Charlie",
+          "CurrentUserType": "Candidate",
+          "Email": "charlie.williams@example.com",
+          "Mobile": "07676533341",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033049",
+          "Status": "Suspended",
+          "HomeAddress": "35 Williams Street",
+          "HomeCity": "London",
+          "HomePostCode": "E5 8XY",
+          "WorkingAddress": "23 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E5 4XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2012-12-11",
+          "StartedAtCX": "2024-01-24",
+          "PayrollID": "PAY3419"
+        },
+        {
+          "Id": 4,
+          "ProfileUserID": "c29ae75d-4223-486d-b363-6948c852acf7",
+          "FirstName": "Diana",
+          "LastName": "Brown",
+          "PreferredName": "Diana",
+          "CurrentUserType": "Candidate",
+          "Email": "diana.brown@example.com",
+          "Mobile": "07102277368",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033083",
+          "Status": "Active",
+          "HomeAddress": "71 Brown Street",
+          "HomeCity": "London",
+          "HomePostCode": "E16 2XY",
+          "WorkingAddress": "30 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E1 9XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2007-03-01",
+          "StartedAtCX": "2024-12-13",
+          "PayrollID": "PAY4888"
+        },
+        {
+          "Id": 5,
+          "ProfileUserID": "d7a1d9ce-d4c0-4f1d-9dbf-05d75a3eeff0",
+          "FirstName": "Ethan",
+          "LastName": "Jones",
+          "PreferredName": "Ethan",
+          "CurrentUserType": "Candidate",
+          "Email": "ethan.jones@example.com",
+          "Mobile": "07389266478",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033117",
+          "Status": "Suspended",
+          "HomeAddress": "91 Jones Street",
+          "HomeCity": "London",
+          "HomePostCode": "E20 6XY",
+          "WorkingAddress": "45 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E5 7XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2002-05-11",
+          "StartedAtCX": "2023-08-27",
+          "PayrollID": "PAY3628"
+        },
+        {
+          "Id": 6,
+          "ProfileUserID": "6ffcdf57-8cf3-4bcb-b163-b1e1ad16dbcf",
+          "FirstName": "Fiona",
+          "LastName": "Miller",
+          "PreferredName": "Fiona",
+          "CurrentUserType": "Candidate",
+          "Email": "fiona.miller@example.com",
+          "Mobile": "07978223456",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033151",
+          "Status": "Suspended",
+          "HomeAddress": "25 Miller Street",
+          "HomeCity": "London",
+          "HomePostCode": "E4 8XY",
+          "WorkingAddress": "100 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E12 9XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2001-03-15",
+          "StartedAtCX": "2024-11-25",
+          "PayrollID": "PAY8958"
+        },
+        {
+          "Id": 7,
+          "ProfileUserID": "5123d984-cab8-4926-ad7a-19c28347cc82",
+          "FirstName": "George",
+          "LastName": "Davis",
+          "PreferredName": "George",
+          "CurrentUserType": "Candidate",
+          "Email": "george.davis@example.com",
+          "Mobile": "07123281538",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033186",
+          "Status": "Suspended",
+          "HomeAddress": "61 Davis Street",
+          "HomeCity": "London",
+          "HomePostCode": "E19 9XY",
+          "WorkingAddress": "14 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E19 7XY",
+          "EmploymentType": "Umbrella",
+          "DateOfBirth": "2015-04-09",
+          "StartedAtCX": "2022-09-18",
+          "PayrollID": "PAY7552"
+        },
+        {
+          "Id": 8,
+          "ProfileUserID": "3fc4a494-8228-4f4d-a452-96f30c5a5f92",
+          "FirstName": "Hannah",
+          "LastName": "Garcia",
+          "PreferredName": "Hannah",
+          "CurrentUserType": "Candidate",
+          "Email": "hannah.garcia@example.com",
+          "Mobile": "07861992528",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033226",
+          "Status": "Inactive",
+          "HomeAddress": "94 Garcia Street",
+          "HomeCity": "London",
+          "HomePostCode": "E18 4XY",
+          "WorkingAddress": "36 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E5 3XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2000-10-28",
+          "StartedAtCX": "2024-09-16",
+          "PayrollID": "PAY9970"
+        },
+        {
+          "Id": 9,
+          "ProfileUserID": "64085fd3-f947-463d-9754-d3a8dfe306a9",
+          "FirstName": "Ian",
+          "LastName": "Taylor",
+          "PreferredName": "Ian",
+          "CurrentUserType": "Candidate",
+          "Email": "ian.taylor@example.com",
+          "Mobile": "07297838271",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033262",
+          "Status": "Inactive",
+          "HomeAddress": "51 Taylor Street",
+          "HomeCity": "London",
+          "HomePostCode": "E4 6XY",
+          "WorkingAddress": "39 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E16 6XY",
+          "EmploymentType": "Umbrella",
+          "DateOfBirth": "2014-05-01",
+          "StartedAtCX": "2023-06-28",
+          "PayrollID": "PAY2508"
+        },
+        {
+          "Id": 10,
+          "ProfileUserID": "aa51291d-b4d5-4582-884e-c3998de4830f",
+          "FirstName": "Julia",
+          "LastName": "Clark",
+          "PreferredName": "Julia",
+          "CurrentUserType": "Candidate",
+          "Email": "julia.clark@example.com",
+          "Mobile": "07200717934",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033293",
+          "Status": "Inactive",
+          "HomeAddress": "37 Clark Street",
+          "HomeCity": "London",
+          "HomePostCode": "E3 6XY",
+          "WorkingAddress": "96 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E12 6XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2013-10-21",
+          "StartedAtCX": "2024-06-13",
+          "PayrollID": "PAY5636"
+        },
+        {
+          "Id": 11,
+          "ProfileUserID": "ff63a282-11b9-4143-8ea2-08620ace1fb8",
+          "FirstName": "Elm",
+          "LastName": "Home",
+          "PreferredName": "Elm",
+          "CurrentUserType": "CareHome",
+          "Email": "elm@carehome.com",
+          "Mobile": "07771796030",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033324",
+          "Status": "Active",
+          "HomeAddress": "6 Home Street",
+          "HomeCity": "London",
+          "HomePostCode": "E6 2XY",
+          "WorkingAddress": "62 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E1 2XY",
+          "EmploymentType": "Umbrella",
+          "DateOfBirth": "2013-08-16",
+          "StartedAtCX": "2023-09-19",
+          "PayrollID": "PAY3118"
+        },
+        {
+          "Id": 12,
+          "ProfileUserID": "5f3e4fd7-a3f1-434a-ab8c-de72a948179d",
+          "FirstName": "Oak",
+          "LastName": "Nursing",
+          "PreferredName": "Oak",
+          "CurrentUserType": "CareHome",
+          "Email": "oak@carehome.com",
+          "Mobile": "07601850439",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033353",
+          "Status": "Suspended",
+          "HomeAddress": "85 Nursing Street",
+          "HomeCity": "London",
+          "HomePostCode": "E18 1XY",
+          "WorkingAddress": "91 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E16 7XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2001-12-29",
+          "StartedAtCX": "2023-12-23",
+          "PayrollID": "PAY5033"
+        },
+        {
+          "Id": 13,
+          "ProfileUserID": "207ae825-b67b-4934-a317-f6185e4a6135",
+          "FirstName": "Pine",
+          "LastName": "Retirement",
+          "PreferredName": "Pine",
+          "CurrentUserType": "CareHome",
+          "Email": "pine@carehome.com",
+          "Mobile": "07644597565",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033383",
+          "Status": "Suspended",
+          "HomeAddress": "5 Retirement Street",
+          "HomeCity": "London",
+          "HomePostCode": "E8 6XY",
+          "WorkingAddress": "55 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E13 2XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2000-11-26",
+          "StartedAtCX": "2025-01-20",
+          "PayrollID": "PAY7830"
+        },
+        {
+          "Id": 14,
+          "ProfileUserID": "ee4da79e-e87e-4aa7-91d4-bbe16c3ec9db",
+          "FirstName": "Cedar",
+          "LastName": "Lodge",
+          "PreferredName": "Cedar",
+          "CurrentUserType": "CareHome",
+          "Email": "cedar@carehome.com",
+          "Mobile": "07231420668",
+          "PhoneVisibleToClients": true,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033520",
+          "Status": "Suspended",
+          "HomeAddress": "81 Lodge Street",
+          "HomeCity": "London",
+          "HomePostCode": "E12 7XY",
+          "WorkingAddress": "4 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E5 6XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2013-02-22",
+          "StartedAtCX": "2024-04-15",
+          "PayrollID": "PAY3553"
+        },
+        {
+          "Id": 15,
+          "ProfileUserID": "8c9fbfe8-6148-4581-b961-0e0d84cdf712",
+          "FirstName": "System",
+          "LastName": "Admin",
+          "PreferredName": "System",
+          "CurrentUserType": "Admin",
+          "Email": "admin@washpass.com",
+          "Mobile": "07586292239",
+          "PhoneVisibleToClients": false,
+          "ProfilePhoto": null,
+          "LastLogin": "2025-05-12T07:22:00.033550",
+          "Status": "Inactive",
+          "HomeAddress": "54 Admin Street",
+          "HomeCity": "London",
+          "HomePostCode": "E15 3XY",
+          "WorkingAddress": "76 Work Rd",
+          "WorkingCity": "London",
+          "WorkingPostCode": "E15 8XY",
+          "EmploymentType": "PAYE",
+          "DateOfBirth": "2000-07-17",
+          "StartedAtCX": "2023-03-16",
+          "PayrollID": "PAY7815"
+        }
+      ],
+    "Users": [
+      {
+        "Id": "f66af710-4dec-419e-b8a0-81245075d981",
+        "UserName": "alice.smith@example.com",
+        "Email": "alice.smith@example.com",
+        "DisplayName": "Alice Smith",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "f3b7dace-5316-4709-820d-f4db8135a945",
+        "UserName": "bob.johnson@example.com",
+        "Email": "bob.johnson@example.com",
+        "DisplayName": "Bob Johnson",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "5ebcfd6d-dcea-480b-817b-98f415de3934",
+        "UserName": "charlie.williams@example.com",
+        "Email": "charlie.williams@example.com",
+        "DisplayName": "Charlie Williams",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "c29ae75d-4223-486d-b363-6948c852acf7",
+        "UserName": "diana.brown@example.com",
+        "Email": "diana.brown@example.com",
+        "DisplayName": "Diana Brown",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "d7a1d9ce-d4c0-4f1d-9dbf-05d75a3eeff0",
+        "UserName": "ethan.jones@example.com",
+        "Email": "ethan.jones@example.com",
+        "DisplayName": "Ethan Jones",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "6ffcdf57-8cf3-4bcb-b163-b1e1ad16dbcf",
+        "UserName": "fiona.miller@example.com",
+        "Email": "fiona.miller@example.com",
+        "DisplayName": "Fiona Miller",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "5123d984-cab8-4926-ad7a-19c28347cc82",
+        "UserName": "george.davis@example.com",
+        "Email": "george.davis@example.com",
+        "DisplayName": "George Davis",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "3fc4a494-8228-4f4d-a452-96f30c5a5f92",
+        "UserName": "hannah.garcia@example.com",
+        "Email": "hannah.garcia@example.com",
+        "DisplayName": "Hannah Garcia",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "64085fd3-f947-463d-9754-d3a8dfe306a9",
+        "UserName": "ian.taylor@example.com",
+        "Email": "ian.taylor@example.com",
+        "DisplayName": "Ian Taylor",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "aa51291d-b4d5-4582-884e-c3998de4830f",
+        "UserName": "julia.clark@example.com",
+        "Email": "julia.clark@example.com",
+        "DisplayName": "Julia Clark",
+        "CurrentUserType": "Candidate",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "ff63a282-11b9-4143-8ea2-08620ace1fb8",
+        "UserName": "elm@carehome.com",
+        "Email": "elm@carehome.com",
+        "DisplayName": "Elm Care Home",
+        "CurrentUserType": "CareHome",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "5f3e4fd7-a3f1-434a-ab8c-de72a948179d",
+        "UserName": "oak@carehome.com",
+        "Email": "oak@carehome.com",
+        "DisplayName": "Oak Nursing",
+        "CurrentUserType": "CareHome",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "207ae825-b67b-4934-a317-f6185e4a6135",
+        "UserName": "pine@carehome.com",
+        "Email": "pine@carehome.com",
+        "DisplayName": "Pine Retirement",
+        "CurrentUserType": "CareHome",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "ee4da79e-e87e-4aa7-91d4-bbe16c3ec9db",
+        "UserName": "cedar@carehome.com",
+        "Email": "cedar@carehome.com",
+        "DisplayName": "Cedar Lodge",
+        "CurrentUserType": "CareHome",
+        "LockoutEnabled": false
+      },
+      {
+        "Id": "8c9fbfe8-6148-4581-b961-0e0d84cdf712",
+        "UserName": "admin@washpass.com",
+        "Email": "admin@washpass.com",
+        "DisplayName": "System Admin",
+        "CurrentUserType": "Admin",
+        "LockoutEnabled": false
+      }
+    ]
+  }
+}

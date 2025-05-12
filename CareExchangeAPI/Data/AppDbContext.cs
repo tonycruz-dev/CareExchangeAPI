@@ -191,17 +191,14 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
                   .HasColumnType("decimal(6,2)")
                   .IsRequired();
 
+            //Correct FK mapping to ShiftRateId
             entity.HasOne(e => e.Shift)
-                  .WithMany()
-                  .HasForeignKey(e => e.Id)
+                  .WithMany(s => s.ShiftRates)
+                  .HasForeignKey(e => e.ShiftRateId)
                   .OnDelete(DeleteBehavior.Cascade);
         });
 
-        //modelBuilder.Entity<UserProfile>()
-        //    .HasMany(u => u.ShiftAssignments)
-        //    .WithOne(a => a.Candidate.)
-        //    .HasForeignKey(a => a.CandidateID)
-        //    .OnDelete(DeleteBehavior.Cascade);
+
 
         modelBuilder.Entity<Timesheet>(entity =>
         {
@@ -529,5 +526,17 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
             .WithOne(p => p.Shift)
             .HasForeignKey(p => p.CPShiftID)
             .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(p => p.CancellationRequests)
+            .WithOne(c => c.RequestedByUser)
+            .HasForeignKey(c => c.RequestedByUserID)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<UserProfile>()
+            .HasMany(p => p.ApprovedCancellations)
+            .WithOne(c => c.ApprovedByUser)
+            .HasForeignKey(c => c.ApprovedBy)
+            .OnDelete(DeleteBehavior.SetNull);
     }
 }

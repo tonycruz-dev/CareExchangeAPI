@@ -1,3 +1,5 @@
 
 add-migration InitialMigration -OutputDir Data/Migrations
-add-migration JobTypesAdded -OutputDir Data/Migrations
+add-migration ShiftRateUpdate -OutputDir Data/Migrations
+add-migration ShiftRateUpdate
+Remove-Migration

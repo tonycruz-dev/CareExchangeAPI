@@ -201,3 +201,12 @@ public enum PayoutStatus
     [Display(Name = "Failed")]
     Failed
 }
+public enum UserType
+{
+    [Display(Name = "Candidate")]
+    Candidate,
+    [Display(Name = "Care Home")]
+    CareHome,
+    [Display(Name = "Admin")]
+    Admin
+}

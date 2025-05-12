@@ -1,15 +1,16 @@
 ﻿using CareExchangeAPI.Models.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CareExchangeAPI.Models;
 
 public class ShiftRate
 {
-
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-
-    public int? ShiftId{ get; set; }
+    /// Foreign key to Shift
+    public int? ShiftRateId { get; set; }
 
 
     public RateType RateType { get; set; } = RateType.Base;

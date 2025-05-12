@@ -12,7 +12,8 @@ public class UserProfile
     public required string LastName { get; set; }
 
     public string PreferredName { get; set; } = string.Empty;
-        
+    public UserType CurrentUserType { get; set; } = UserType.Candidate;
+
     [EmailAddress]
     public required string Email { get; set; }
 
